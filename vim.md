@@ -3,15 +3,15 @@
 
 ###  Arrow key & mix with number 
 u = undo
-j down --- 4j
-k up   --- 6k
-l Right --- 2l
-h left  --- 5h
+j = down 
+k = up 
+l = Right
+h = left 
 ```bash
-j 
-k 
-l 
-h 
+j 4j
+k 6k
+l 2l
+h 5h
 ```
 
 
