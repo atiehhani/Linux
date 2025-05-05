@@ -1,7 +1,7 @@
 # Vim
 
 
-###  Arrow key & mix with number 
+##  Arrow key & mix with number 
 u = undo
 j = down 
 k = up 
@@ -16,7 +16,6 @@ h 5h
 
 
 ## For word 
---------------------------------------------------
 ###  move one word one word first of word
 ```bash
 w 
@@ -34,7 +33,6 @@ b
 
 
 ##  For file 
------------------
 ###  First of file
 ```bash
 gg 
@@ -48,7 +46,6 @@ G
 
 
 ## For line
---------------------
 ###  Insert mode 
 i before cursor
 a after cursor
@@ -92,7 +89,6 @@ O
 
 
 ## Cut
------------------
 ### For cut one charecter
 ```bash
 x
@@ -128,8 +124,6 @@ dap
 ```
 
 ## Copy and Paste
----------------------
-
 ### Copy and Paste one line 
 copy= yy paste= p
 ```bash
@@ -151,8 +145,6 @@ P
 ```
 
 ## Search in File 
------------------------------
-
 ### Search a word in command mode
 /pattern + Enter for search more word press n
 n > from up to down 
@@ -161,7 +153,6 @@ shift + n > from down to up
 /word
 ```
 ## Search and Replace 
-------------------------
 ### Search and Replce one word
 :s/pattren/replace word
 ```bash
@@ -191,8 +182,6 @@ shift + n > from down to up
 :%s/used/LINUX/gi
 ```
 ## Save the file
----------------------------
-
 ###  just save
 command line enviroment 
 :w = save
@@ -219,8 +208,6 @@ command line enviroment
 ```
 
 ## Tab in vim
-------------------------
-
 ### tab
 ```bash
 :tabnew
@@ -230,7 +217,6 @@ command line enviroment
 ```
 
 ## Diff in vim
------------------------
 ### diffrence two file
 ctrl + ww = switch between files
 ```bash
@@ -244,7 +230,6 @@ diffput
 diffget
 ```
 ## more switch in vim in search
---------------------------------------------------------------
 ### for disable case sensitive in search vim 
 after save and quit all of them be cancel
 :set ic + Enter
@@ -274,7 +259,6 @@ vim .vimrc = vim ~/.vimrc
 :set number
 ```
 ## install plugin for vim in linux
------------------------------------------
 vim-plug
 https://github.com/junegunn/vim-plug
 for Unix:
