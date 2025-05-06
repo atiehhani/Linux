@@ -1,4 +1,4 @@
-#Proxy
+# Proxy
 
 ```bash
 vim /etc/apt/apt.conf.d/95proxies
@@ -9,7 +9,7 @@ Acquire::http::Proxy "http://username:password@proxy_server:port/";
 Acquire::https::Proxy "http://username:password@proxy_server:port/";
 ```
 -----------------------------------
-##proxy for Docker
+## proxy for Docker
 make directory for proxy:
 ```bash
 sudo mkdir -p /etc/systemd/system/docker.service.d
@@ -35,7 +35,7 @@ for ensure to set proxy:
 ```bash
 systemctl show --property=Environment docker
 ```
-##proxy for Ansible
+## proxy for Ansible
 Ansible directly do not use proxy, depend on the tasks and modules like yum , apt , uri , det_url and so on needs.
 ```bash
 - name: Use a proxy to download a file
