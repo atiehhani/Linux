@@ -2,11 +2,7 @@
 
 
 ##  Arrow key & mix with number 
-u = undo
-j = down 
-k = up 
-l = Right
-h = left 
+u = undo, j = down, k = up, l = Right, h = left
 ```bash
 j 4j
 k 6k
