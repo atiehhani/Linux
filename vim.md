@@ -50,8 +50,7 @@ i
 a
 ```
 ### First of line
-0
-shift + 6
+0 or shift + 6
 ```bash
 0
 ^
