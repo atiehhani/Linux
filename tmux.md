@@ -18,3 +18,5 @@ tmux ls
 tmux att -t 0
 
 ```
+## byobu
+the more modern Tmux terminal multiplexer.
