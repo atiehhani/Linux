@@ -5,11 +5,11 @@
  tmmux ls = show the tmux windows with numbers.
  tmux att -t 0 = attach to window of 0.
 
- ( ctrl + b ) + d = for dettach.
- ( ctrl + b ) + ( shift+5 ) % = split horizental.
- ( ctrl + b ) + ( shift+' ) " = split horizental.
- ( ctrl + b ) + o = switch between terminal. or with arrow keys
- ( ctrl + b ) + ( shift+/ ) ? = show different switches.
+ ( ctrl + b ) + d = for dettach.<br>
+ ( ctrl + b ) + ( shift+5 ) % = split horizental.<br>
+ ( ctrl + b ) + ( shift+' ) " = split horizental.<br>
+ ( ctrl + b ) + o = switch between terminal. or with arrow keys.<br>
+ ( ctrl + b ) + ( shift+/ ) ? = show different switches.<br>
  ( ctrl + b ) + n = next window.
  
 ```bash
