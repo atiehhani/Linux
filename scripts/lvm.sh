@@ -25,4 +25,8 @@ lvextend -L 700M /dev/my_vg/my_lv
 resize2fs /dev/my_vg/my_lv
 #if xfs file syatem
 xfs_growfs /mnt/my_lvm
+cp /etc/fstab /etc/fstab.orig
+echo "/dev/sdb   /mnt/my_lvm      xfs    defaults    0 2" >> /etc/fstab
+mount -a
+df -Th
 df -h /mnt/my_lvm
