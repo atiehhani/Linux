@@ -85,6 +85,13 @@ cut file2 -d, -f1
 cut -d, -f1 file2 
 cut -d, -f1 file2|cut -d: -f1
 ```
+## awk
+Search and print lines in files.  
+```bash
+awk '{print $1}' /etc/passwd
+awk -F ":" '{print NR,$2}' /etc/passwd
+awk '{print $1"\t"$2}' /etc/passwd
+```
 ## paste 
 Merge some files toghter with delimeter.  
 ```bash
