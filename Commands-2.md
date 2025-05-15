@@ -1,7 +1,10 @@
 ## cat
-**-n** = show line numbers with new lines.  
-**nl** = show line number and ignore new lines without contents.  
-**tac** = cat file from end to first.  
+| Command | Description                                                    |
+|---------|----------------------------------------------------------------|
+| `-n`    | Show line numbers with new lines.                              |
+| `nl`    | Show line numbers and ignore new lines without contents.       |
+| `tac`   | Display contents of a file in reverse (from end to first).     |
+  
 ```bash
 cat -n file1
 nl file
