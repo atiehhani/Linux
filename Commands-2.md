@@ -14,7 +14,7 @@ echo "this is for test 123456" | tr is IS
 ```
 ## sort
 sort the file base on Alphabet,   
-Priority of new line is more then lowercase is more.  
+Priority of new line is moreو then lowercase is more.  
 -n = Base on number
 ```bash
 sort file1 > file_sort
@@ -59,23 +59,23 @@ head 20 file1
 ```
 ## tail
 show end of file
--n = show number of lines
--f = follow 
+-n = show number of lines  
+-f = follow  
 ```bash
 tail -n 3 file1
 tail 3 file1
 tail -f /var/log/nginx/access.log
 ```
 ## less 
-show file from first it is like cat.
-Enter = line by line shown.
-sspace = page by page shown.
+show file from first it is like cat.  
+Enter = line by line shown.  
+sspace = page by page shown.  
 ```bash
 less file2
 ```
 ## cut
-show a unique filed. It is works base on character.
--d = delimeter
+show a unique filed. It is works base on character.  
+-d = delimeter  
 -f = filed
 ```bash
 cut file2 -d, -f1
@@ -89,9 +89,9 @@ paste file3 file4
 paste -d+ file3 file4
 ```
 ## sed
-Stream Editor:Replace with commad-line 
--i = insert in file and change your file.
-95s = just 95 line number change.
+Stream Editor:Replace with commad-line   
+-i = insert in file and change your file.  
+95s = just 95 line number change.  
 ```bash
 sed -i "s/yes/No/g" ssh_config
 sed -i "95s/yes/YESSS/g" ssh_config
@@ -104,16 +104,16 @@ Output of command show and write to a file both.
 ls -l | tee lsfile.yxy
 ```
 ## grep
-Search and show some pattern from file or files.
--i = do not case sensitive.
--n = show line number of that pattern.
--c = show count without showing pattern and line number.
--v = show on the contrary
--r = recersive mode
-(-rni)
--B1 or -B2 or ... = show your pattern with 1 or 2 ,.. before line.
--A1 or -A2 or ... = show your pattern with 1 or 2 ,.. after line.
--C2 = center, 2 after and 2 before.
+Search and show some pattern from file or files.  
+-i = do not case sensitive.  
+-n = show line number of that pattern.  
+-c = show count without showing pattern and line number.  
+-v = show on the contrary  
+-r = recersive mode  
+(-rni)  
+-B1 or -B2 or ... = show your pattern with 1 or 2 ,.. before line.  
+-A1 or -A2 or ... = show your pattern with 1 or 2 ,.. after line.  
+-C2 = center, 2 after and 2 before.  
 ```bash
 grep "YES" sshd_config
 grep -i "YES" sshd_config
