@@ -114,10 +114,14 @@ Search and show some pattern from file or files.
 -B1 or -B2 or ... = show your pattern with 1 or 2 ,.. before line.  
 -A1 or -A2 or ... = show your pattern with 1 or 2 ,.. after line.  
 -C2 = center, 2 after and 2 before.  
+^ = first of line.  
+& = end of line.  
 ```bash
 grep "YES" sshd_config
 grep -i "YES" sshd_config
 grep -i -n -c "YES" sshd_config file1
 grep -i -n -r "YES" /etc/ssh/
 grep -n -C2 "YES" sshd_config | grep forwarding | wc -l > file1
+grep -v ^# sshd_config
+grep -v ^# sshd_config | grep -v ^$
 ```
