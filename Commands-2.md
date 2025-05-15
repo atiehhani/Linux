@@ -13,8 +13,8 @@ tr , translate a file
 echo "this is for test 123456" | tr is IS
 ```
 ## sort
-sort the file base on Alphabet, 
-Priority of new line is more then lowercase is more.
+sort the file base on Alphabet,   
+Priority of new line is more then lowercase is more.  
 -n = Base on number
 ```bash
 sort file1 > file_sort
@@ -22,10 +22,10 @@ sort -n file1
 awk '{print $1}' /var/log/nginx/access.log | sort
 ```
 ## unique
-unique the file but it is usual runned on sort file.
--c = determined with number of each word.
--d = determined just word more than one time.
--u = determined just word 
+unique the file but it is usual runned on sort file.  
+-c = determined with number of each word.  
+-d = determined just word more than one time.  
+-u = determined just word  
 ```bash
 sort file1 | uniq
 awk '{print $1}' /var/log/nginx/access.log | sort | uniq -c | sort -nr
