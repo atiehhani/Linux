@@ -43,24 +43,24 @@ Generate yes in a file
 yes > yes_file
 ```
 ## wc
-word count.
-wc = given 3 number that first number is line, second one is word and third one number of byte.
--l = count lines
+word count.  
+wc = given 3 number that first number is line, second one is word and third one number of byte.  
+-l = count lines  
 ```bash
 wc file2
 wc -l file2
 ```
 ## head 
-show head of file
--n = number of lines
+show head of file  
+-n = number of lines  
 ```bash
 head -n 20 file1
 head 20 file1
 ```
 ## tail
-show end of file
+show end of file  
 -n = show number of lines  
--f = follow  
+-f = follow    
 ```bash
 tail -n 3 file1
 tail 3 file1
@@ -76,20 +76,20 @@ less file2
 ## cut
 show a unique filed. It is works base on character.  
 -d = delimeter  
--f = filed
+-f = filed  
 ```bash
 cut file2 -d, -f1
 cut -d, -f1 file2 
 cut -d, -f1 file2|cut -d: -f1
 ```
 ## paste 
-Merge some files toghter with delimeter.
+Merge some files toghter with delimeter.  
 ```bash
 paste file3 file4
 paste -d+ file3 file4
 ```
 ## sed
-Stream Editor:Replace with commad-line   
+Stream Editor:Replace with commad-line  
 -i = insert in file and change your file.  
 95s = just 95 line number change.  
 ```bash
