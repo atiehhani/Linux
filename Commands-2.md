@@ -1,5 +1,5 @@
 ## cat
-cat with -n show line numbers with new lines.  
+**-n** show line numbers with new lines.  
 **nl** = show line number and ignore new lines without contents.  
 **tac** ,cat file from end to first.  
 ```bash
