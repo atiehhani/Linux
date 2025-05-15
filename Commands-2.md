@@ -14,7 +14,7 @@ echo "this is for test 123456" | tr is IS
 ```
 ## sort
 sort the file base on Alphabet,   
-Priority of new line is moreو then lowercase is more.  
+Priority of new line is more, then lowercase is more.  
 -n = Base on number
 ```bash
 sort file1 > file_sort
