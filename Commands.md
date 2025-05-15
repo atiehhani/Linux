@@ -21,7 +21,7 @@ ls -a
 ```
 ## echo
 ### print any string
-print every thing front it 
+print every thing front it.  
 -n > without enter 
 ```bash
 echo devops
@@ -32,11 +32,11 @@ echo -n "devops | linux"
 echo -e "devops \n linux"
 ```
 ### checking correctness previous command
-echo $? = 0 /
-echo $? = 127 /
-echo $? = 2 /
-if output was 0 means previous command was ok otherwise not ok
-concept of this numbers is diffrence
+echo $? = 0 /  
+echo $? = 127 /  
+echo $? = 2 /  
+if output was 0 means previous command was ok otherwise not ok.  
+concept of this numbers is diffrence  
 ```bash
 echo $?
 ```
