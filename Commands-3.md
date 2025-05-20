@@ -1,8 +1,8 @@
 ## find
-Search file.
--iname = not case sensitive.
--type f = just file type.
--cmin = change minute
+Search file.  
+-iname = not case sensitive.  
+-type f = just file type.  
+-cmin = change minute  
 ```bash
 find / -name hani
 find / -iname hani
@@ -17,9 +17,9 @@ file /var/log/dmesg.1.gz
 file /var/log/auth.log
 ```
 ## zip & gzip & unzip & gunzip
-compress the file.
--9 = compress better.
--r = recursive
+compress the file.  
+-9 = compress better.  
+-r = recursive  
 ```bash
 zip file_zip.zip file.txt
 zip -r dir1
@@ -31,10 +31,10 @@ gunzip file.txt.gz
 compress files and it is better and newer.
 
 ## tar
-archive the files.
--cvf = for create.
--xvf = for extract.
--cvzf = for gzip.
+archive the files.  
+-cvf = for create.  
+-xvf = for extract.  
+-cvzf = for gzip.  
 ```bash
 tar -cvf dir.tar dir1 
 tar -xvf dir.tar
