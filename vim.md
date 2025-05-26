@@ -226,39 +226,39 @@ diffget
 ```
 ## more switch in vim in search
 ### for disable case sensitive in search vim 
-after save and quit all of them be cancel
-:set ic + Enter
-:set noic + Enter = cancel ic and turn to before one
+after save and quit all of them be cancel  
+:set ic + Enter  
+:set noic + Enter = cancel ic and turn to before one  
 ```bash
 :set noic
 ```
 ### for high light the word in search
-after save and quit all of them be cancel
-:set hls
-:set nohls = cancel hls 
+after save and quit all of them be cancel  
+:set hls  
+:set nohls = cancel hls  
 ```bash
 :set hls
 ```
 ### for show number lines in search
-after save and quit all of them be cancel
-:set number
-:set nonumber = cancel number
+after save and quit all of them be cancel  
+:set number  
+:set nonumber = cancel number  
 ```bash
 :set number
 ```
 ## configure your vim (.vimrc)
-for saving some configuration in vim:
+for saving some configuration in vim:  
 ```bash
 vim .vimrc = vim ~/.vimrc 
 :set hls
 :set number
 ```
 ## install plugin for vim in linux
-vim-plug
-https://github.com/junegunn/vim-plug
-for Unix:
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim-plug  
+https://github.com/junegunn/vim-plug  
+for Unix:  
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \  
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim  
 Usage:
 Add a vim-plug section to your ~/.vimrc (or ~/.config/nvim/init.vim for Neovim)
 
