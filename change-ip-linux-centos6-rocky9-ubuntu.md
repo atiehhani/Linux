@@ -11,3 +11,10 @@ CentOS 6 uses legacy network scripts for network configuration.
 
 ```bash
 ifconfig
+
+```bash
+ip addr
+
+
+
+
