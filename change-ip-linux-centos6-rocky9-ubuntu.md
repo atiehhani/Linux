@@ -3,7 +3,7 @@
 This document describes standard and practical methods to change IP addresses
 on different Linux distributions commonly used in server environments.
 ---
-#### 1. Change IP Address in CentOS 6
+### 1. Change IP Address in CentOS 6
 
 CentOS 6 uses legacy network scripts for network configuration.
 ---
@@ -17,9 +17,9 @@ ip addr
 Common interface names:
 eth0
 eth1
-1.2 Edit Network Configuration File
+#### 1.2 Edit Network Configuration File
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
-1.3 Configure Static IP
+#### 1.3 Configure Static IP
 Example configuration:
 DEVICE=eth0
 TYPE=Ethernet
@@ -31,26 +31,26 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.1.1
 DNS1=8.8.8.8
 DNS2=8.8.4.4
-1.4 Restart Network Service
+#### 1.4 Restart Network Service
 service network restart
 or:
 ifdown eth0 && ifup eth0
-1.5 Verification
+#### 1.5 Verification
 ifconfig eth0
 route -n
 ping 8.8.8.8
-1.6 Temporary IP Change (Not Persistent)
+#### 1.6 Temporary IP Change (Not Persistent)
 ifconfig eth0 192.168.1.100 netmask 255.255.255.0
 route add default gw 192.168.1.1
 ⚠️ This configuration will be lost after reboot.
-2. Change IP Address in Rocky Linux 9.5
+### 2. Change IP Address in Rocky Linux 9.5
 Rocky Linux 9.5 uses NetworkManager.
-2.1 List Network Connections
+#### 2.1 List Network Connections
 nmcli con show
 Example output:
 NAME      UUID                                  TYPE      DEVICE
 ens192    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  ethernet  ens192
-2.2 Configure Static IP
+#### 2.2 Configure Static IP
 Assumptions:
 IP: 192.168.1.100/24
 Gateway: 192.168.1.1
@@ -59,20 +59,20 @@ nmcli con mod ens192 ipv4.method manual
 nmcli con mod ens192 ipv4.addresses 192.168.1.100/24
 nmcli con mod ens192 ipv4.gateway 192.168.1.1
 nmcli con mod ens192 ipv4.dns "8.8.8.8 8.8.4.4"
-2.3 Apply Changes
+#### 2.3 Apply Changes
 nmcli con down ens192
 nmcli con up ens192
 or without full disconnect:
 nmcli device reapply ens192
-2.4 Verification
+#### 2.4 Verification
 ip a show ens192
 ip route
 resolvectl status
 ping 8.8.8.8
-2.5 Revert to DHCP
+#### 2.5 Revert to DHCP
 nmcli con mod ens192 ipv4.method auto
 nmcli con down ens192 && nmcli con up ens192
-2.6 Edit Configuration File (If Required)
+#### 2.6 Edit Configuration File (If Required)
 vi /etc/NetworkManager/system-connections/ens192.nmconnection
 [ipv4]
 method=manual
@@ -82,18 +82,18 @@ dns=8.8.8.8;8.8.4.4;
 Apply permissions and restart:
 chmod 600 ens192.nmconnection
 systemctl restart NetworkManager
-3. Change IP Address in Ubuntu Server
+### 3. Change IP Address in Ubuntu Server
 Ubuntu Server (18.04 and newer) uses Netplan.
-3.1 Identify Network Interface
+#### 3.1 Identify Network Interface
 ip a
 Common names:
 ens160
 eth0
-3.2 Edit Netplan Configuration
+#### 3.2 Edit Netplan Configuration
 vi /etc/netplan/01-netcfg.yaml
 or:
 vi /etc/netplan/00-installer-config.yaml
-3.3 Configure Static IP (Netplan)
+#### 3.3 Configure Static IP (Netplan)
 Example:
 network:
   version: 2
@@ -108,15 +108,15 @@ network:
         addresses:
           - 8.8.8.8
           - 8.8.4.4
-3.4 Apply Configuration
+#### 3.4 Apply Configuration
 netplan apply
 Test safely:
 netplan try
-3.5 Revert to DHCP
+#### 3.5 Revert to DHCP
 dhcp4: yes
 Then:
 netplan apply
-3.6 Verification
+#### 3.6 Verification
 ip a
 ip route
 systemd-resolve --status
