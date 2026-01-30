@@ -23,6 +23,7 @@ eth1
 #### 1.2 Edit Network Configuration File
 ```bash
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
+```
 #### 1.3 Configure Static IP
 Example configuration:
 ```bash
@@ -36,6 +37,7 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.1.1
 DNS1=8.8.8.8
 DNS2=8.8.4.4
+```
 #### 1.4 Restart Network Service
 ```bash
 service network restart
