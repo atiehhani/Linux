@@ -139,6 +139,19 @@ p
 P
 ```
 
+## Select many lines and write or delete one or more character
+
+```bash
+ctrl + v 
+```
+(visual Block)
+with j or arrow key go down in line 
+```bash
+shift + i
+```
+write comment (like # or //)
+then exec **ESC** as a result execute on all lines.
+
 ## Search in File 
 ### Search a word in command mode
 /pattern + Enter for search more word press n
@@ -280,3 +293,4 @@ Reload the file or restart Vim, then you can,
     :PlugClean to remove plugins no longer in the list
 then:
 Open vim environment > :PlugInstall > Enter
+
