@@ -1,0 +1,15 @@
+
+
+/var/lotus/logs/*.log /var/lotus/logs/*[0-9]  {
+    daily
+    copytruncate
+    rotate 10
+    compress
+    dateext
+    dateformat  -%Y%m%d
+    lastaction
+      /usr/bin/find /var/lotus/logs/ -type f -regex '.*[0-9]$' -delete
+      cd /var/lotus/libs/ ; mkdir backup-logrotate ;mv $(sha1sum *.jar.* | sort -k1 | awk '!seen[$1]++' | awk '{print $2}') backup-logrotate/ ;rm -rvf *.jar.*;mv backup-logrotate/* ./
+   endscript
+
+}
