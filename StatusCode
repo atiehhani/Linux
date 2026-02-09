@@ -1,0 +1,34 @@
+Servers can return a variety of status codes to indicate the outcome of a client's request. Here are some common HTTP status codes along with their general meanings:
+1.	Informational Codes:
+  o	100: Continue
+  o	101: Switching Protocols
+2.	Successful Codes:
+  o	200: OK
+  o	201: Created
+  o	202: Accepted
+  o	204: No Content
+3.	Redirection Codes:
+  o	301: Moved Permanently
+  o	302: Found
+  o	304: Not Modified
+  o	307: Temporary Redirect
+  o	308: Permanent Redirect
+4.	Client Error Codes:
+  o	400: Bad Request
+  o	401: Unauthorized
+  o	403: Forbidden
+  o	404: Not Found
+  o	405: Method Not Allowed
+  o	408: Request Timeout
+  o	409: Conflict
+  o	410: Gone
+  o	429: Too Many Requests
+5.	Server Error Codes:
+  o	500: Internal Server Error
+  o	501: Not Implemented
+  o	502: Bad Gateway
+  o	503: Service Unavailable
+  o	504: Gateway Timeout
+  o	505: HTTP Version Not Supported
+These are just a few examples of the commonly used HTTP status codes. There are many more status codes available, each serving a specific purpose in communication between clients and servers.
+
