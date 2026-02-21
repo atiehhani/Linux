@@ -54,3 +54,19 @@ Allows custom rotation rules per service.
 |`notifempty	`              | Do not rotate empty log files|
 |`missingok  `               |	Do not complain if log file is missing|
 |`postrotate / endscript`	  | Commands to run after rotation (e.g., systemctl reload nginx)|
+
+
+## 4. Testing logrotate
+
+Test config without actually rotating:
+```bash
+sudo logrotate --debug /etc/logrotate.conf
+```
+Force rotation immediately:
+```bash
+sudo logrotate -f /etc/logrotate.d/nginx
+```
+Check rotated logs:
+```bash
+ls -lh /var/log/nginx/
+```
