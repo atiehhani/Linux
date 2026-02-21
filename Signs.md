@@ -24,3 +24,9 @@ echo  "devops | linux" > file1
 echo ubuntu >> file1
 cat docker-compose.yml | wc -l
 ```
+
+### run previous command 
+up key of arrow keys or use !! 
+```bash
+!!
+```
