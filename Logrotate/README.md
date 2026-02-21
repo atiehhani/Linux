@@ -40,3 +40,17 @@ include /etc/logrotate.d
 One file per service, e.g., nginx, httpd, mysql, lotus, etc.
 
 Allows custom rotation rules per service.
+
+## Common Options:
+|Option                    |  Description |
+|  ---------------------   |-------------- |
+|`daily / weekly / monthly`	| How often to rotate the logs|
+|`rotate N	 `               | Number of old logs to keep|
+|`compress   `               |	Compress old logs with gzip|
+|`delaycompress`             |	Delay compression by one rotation (useful for logs still being written)|
+|`copytruncate`	            | Truncate the original log file instead of moving it (useful for apps that cannot reopen logs)|
+|`create mode owner group	 ` | Create a new log file with specified permissions|
+|`dateext	    `              | Append the date to rotated files instead of numbers|
+|`notifempty	`              | Do not rotate empty log files|
+|`missingok  `               |	Do not complain if log file is missing|
+|`postrotate / endscript`	  | Commands to run after rotation (e.g., systemctl reload nginx)|
