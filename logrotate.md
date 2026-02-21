@@ -1,5 +1,5 @@
 
-
+```bash
 /var/lotus/logs/*.log /var/lotus/logs/*[0-9]  {
     daily
     copytruncate
@@ -13,3 +13,4 @@
    endscript
 
 }
+```
